@@ -12,9 +12,13 @@ namespace Delegates
             double a = 10;
             double b = 12;
 
-            BinaryNumericOperation op = CalculationService.Max;                        
+            //BinaryNumericOperation op = CalculationService.Max;                        
 
-            double result = op(a, b);            
+            BinaryNumericOperation op = new BinaryNumericOperation(CalculationService.Max);
+
+            //double result = op(a, b);
+
+            double result = op.Invoke(a, b);
             Console.WriteLine(result);
         }
     }
